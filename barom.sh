@@ -221,7 +221,7 @@ uploadMain() {
     case "$1" in
         gof)
             local FILE="@$2"
-            local SERVER=$(curl -s https://apiv2.gofile.io/getServer | jq  -r '.data|.server')
+            local SERVER=$(curl -s https://api.gofile.io/getServer | jq  -r '.data|.server')
             local UP=$(curl -F file=${FILE} https://${SERVER}.gofile.io/uploadFile)
             local LINK=$(echo $UP | jq -r '.data|.downloadPage')
             ;;
