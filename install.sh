@@ -7,6 +7,6 @@ else
 	BRANCH=main
 fi
 
-curl -Lo /tmp/barom https://raw.githubusercontent.com/alanndz/barom/"$BRANCH"/barom.sh # https://git.io/JUjwP
+curl -Lo /tmp/barom https://raw.githubusercontent.com/sgrhmt/barom/"$BRANCH"/barom.sh
 chmod +x /tmp/barom
 sudo install /tmp/barom /usr/local/bin/barom
